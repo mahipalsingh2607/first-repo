@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyGitRepos</string>
+    <string name="shareUsing">Share using</string>
+    <string name="addNewRepo">Add a new Repository</string>
+    <string name="newRepoAdded">New Repository Added Successfully</string>
+    <string name="errorOccurred">Some Error Occurred</string>
+    <string name="enterRepoName">Enter Repo Name</string>
+    <string name="enterOwnerName">Enter Owner Name</string>
+    <string name="addRepo">Add Repository</string>
+    <string name="pleaseEnterBothFields">Please Enter Both Fields</string>
+</resources>

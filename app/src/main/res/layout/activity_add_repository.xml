@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.mygitrepos.viewmodel.AddRepositoryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.AddRepositoryActivity">
+
+        <include
+            android:id="@+id/includeActionBar"
+            layout="@layout/action_bar" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etRepoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/hundred_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:hint="@string/enterRepoName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/includeActionBar" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etOwnerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:hint="@string/enterOwnerName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etRepoName" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddRepository"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:padding="@dimen/five_dp"
+            android:text="@string/addRepo"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etOwnerName" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progress  ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
