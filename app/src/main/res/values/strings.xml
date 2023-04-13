@@ -7,5 +7,6 @@
     <string name="enterRepoName">Enter Repo Name</string>
     <string name="enterOwnerName">Enter Owner Name</string>
     <string name="addRepo">Add Repository</string>
+    <string name="myGitHubRepositories">My GitHub Repositories</string>
     <string name="pleaseEnterBothFields">Please Enter Both Fields</string>
 </resources>

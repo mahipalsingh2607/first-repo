@@ -1,12 +1,16 @@
 package com.example.mygitrepos.view
 
 import android.content.Intent
+import android.graphics.Canvas
+import android.graphics.Rect
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
 import com.example.mygitrepos.R
 import com.example.mygitrepos.Utility.Constants
 import com.example.mygitrepos.databinding.ActivityMainBinding
@@ -41,6 +45,15 @@ class MainActivity : AppCompatActivity(), GitRepoAdapter.onClick {
                 var gitRepoAdapter =
                     GitRepoAdapter(it as ArrayList<GithubResponseItem?>?, this@MainActivity)
                 binding.rvGitRepos.adapter = gitRepoAdapter
+                binding.rvGitRepos.addItemDecoration(object : RecyclerView.ItemDecoration() {
+                    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+                        outRect.top = 10
+                    }
+
+                    override fun onDraw(canvas: Canvas, parent: RecyclerView, state: RecyclerView.State) {
+
+                    }
+                })
             }
         })
     }

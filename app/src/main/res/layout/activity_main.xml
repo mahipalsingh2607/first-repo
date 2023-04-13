@@ -15,6 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/grey"
         tools:context=".view.MainActivity">
 
         <include
@@ -29,6 +30,7 @@
             android:layout_marginEnd="@dimen/fifteen_dp"
             android:layout_marginTop="@dimen/fifteen_dp"
             android:layout_marginBottom="@dimen/five_dp"
+            android:clipToPadding="false"
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
